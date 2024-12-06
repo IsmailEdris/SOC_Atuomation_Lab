@@ -43,3 +43,42 @@ The project focuses on:
 
 **7. Documentation and Portfolio:**
 - Includes logical diagrams, setup instructions, troubleshooting notes, and key observations, making it an ideal project to feature in a professional portfolio.
+
+## Lab Topology 
+
+![adf](https://i.imgur.com/v1cyhs3.png)
+
+**Explanation:**
+
+**1. Send Events:** 
+ 
+  - The Wazuh Agent (Windows 10 Client) will send events to the internet (the cloud).
+
+**2. Receive Events:**
+  
+  - Wazuh receives the events that the Windows 10 Client sent.
+
+**3. Send Alerts:**
+  
+  - Wazuh sends an alert to Shuffle for enrichment and orchestration purposes.
+
+**4. Enrich Events:**
+  
+  - Shuffle enriches the events.
+
+**5. Send Alerts:**
+  
+  - Shuffle sends an alert to TheHive to facilitate case management and incident tracking.
+
+**6. Send Email:**
+  
+  - Shuffle also sends an email alert to the SOC Analyst.
+
+**7. Send & Receive Email:**
+  
+  - The SOC Analyst receives and reads the contents of the email.
+
+**8. Send Response Action:** '
+  
+  - The SOC Analyst sends the response action to the internet (the cloud). Next, the cloud routes the response action to Shuffle. After, Shuffle sends the response action to Wazuh. Finally, Wazuh delivers the response action to the Windows 10 Client who originally sent the events. 
+
